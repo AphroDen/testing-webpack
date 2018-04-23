@@ -1,5 +1,51 @@
 @import '../common/styles/_libs';
 //@import './styles/test';
 body {
-  background: purple;
+  background: none;
+}
+.wrapper {
+  margin: 0 auto;
+  padding: 0 3%;
+}
+.main-nav {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 56px;
+
+  background: rgba(47,47,47,0.98);
+}
+
+.menu {
+  display: flex;
+  margin: auto;
+  list-style: none;
+
+}
+ul {
+  //.logo {
+  //  background-image: url("dribble.gif") ;
+  //}
+}
+
+nav {
+  ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    width: 50%;
+
+    a {
+
+      text-decoration: none;
+      transition: all .5s ease;
+
+      &:hover {color: red;}
+    }
+  }
+
+  li  {
+    display: inline-block;
+  }
 }
