@@ -1,51 +1,70 @@
 @import '../common/styles/_libs';
 //@import './styles/test';
 body {
-  background: none;
+  //background: none;
+  box-sizing: border-box;
 }
+
 .wrapper {
   margin: 0 auto;
-  padding: 0 3%;
-}
-.main-nav {
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  height: 56px;
-
-  background: rgba(47,47,47,0.98);
+  padding: 0;
 }
 
-.menu {
-  display: flex;
-  margin: auto;
-  list-style: none;
 
-}
-ul {
-  //.logo {
-  //  background-image: url("dribble.gif") ;
-  //}
-}
+
+//.menu {
+//  display: flex;
+//  margin-right: auto;
+//  list-style: none;
+//}
 
 nav {
+  &.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 35px;
+    width: 100%;
+    height: 56px;
+    background: rgba(47, 47, 47, 0.98);
+  }
   ul {
     display: flex;
     justify-content: space-between;
-    list-style-type: none;
-    width: 50%;
+    list-style: none;
+    margin: 0;
+    width: 40%;
+    .hedge {
+      padding-right: 50px;
+      transition: all .5s ease;
+      &:hover {
+        filter: invert(.5);
 
+      }
+    }
     a {
-
       text-decoration: none;
       transition: all .5s ease;
-
-      &:hover {color: red;}
+      color: #999;
+      &:hover {
+        color: #D6D6D6;
+      }
     }
   }
 
-  li  {
-    display: inline-block;
+input{
+  //background: url("paper-plane.png") no-repeat 5px 6px white;
+  background: url("https://cdn.dribbble.com/assets/icon-search-7a07ad9f258fc1d8c28a29faa5627b41c2cc353d138b6bc3e987e0719584ce69.png") no-repeat 5px 7px white;
+
+  //background-repeat: no-repeat;
+  //background-position: left;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  padding: 2px 25px;
+  //background-size: auto 90%;  отвечает за размер иконки справа
   }
+  //li  {
+  //  display: inline-block;
+  //}
 }
