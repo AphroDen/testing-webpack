@@ -11,7 +11,6 @@ body {
 .wrapper {
   margin: 0 auto;
   padding: 0;
-
   font-variant: small-caps; /*очень классная фича*/
 }
 
@@ -42,9 +41,11 @@ body {
     margin: 0;
     min-width: 744px;
     padding: 0;
+
     .header-icon {
       //padding-right: 10px;
       transition: all .15s ease;
+
       &:hover {
         filter: invert(.5);
       }
@@ -100,6 +101,7 @@ body {
     //text-align: left;
     border-radius: 0 0 5px 5px;
     //transition: all .4s ease;
+
     a {
       display: block;
       white-space: nowrap;
@@ -119,10 +121,10 @@ body {
   }
 }
 
-.kek1:hover .kek3 {
-  float: none;
-  text-align: left;
-}
+//.kek1:hover .kek3 {
+//  float: none;
+//  text-align: left;
+//}
 
 .separator {
   border-top: 1px solid $hover-bg;
@@ -138,4 +140,13 @@ body {
       display: none;
     }
   }
+}
+
+hr.styled_hr {
+  border-top: 3px double #8c8b8b;
+  margin: 0;
+}
+
+.progress-bar {
+  border-right: 1px solid white;
 }
