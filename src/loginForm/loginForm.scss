@@ -1,4 +1,103 @@
+$text_color: #7f7e7f;
+$sign-in_color: #6c411b;
+$beige: #d29d41;
+* {
+  outline: none;
+}
+
 body {
   background: #585858;
-;
+  //margin: 0 auto;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  background: #121317;
+  color: $text_color;
+  font-size: 3rem;
+  height: 530px;
+  width: 470px;
+  padding: 60px 30px;
+  position: absolute;
+  top: 15%;
+  left: 35%;
+  .login {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 70px;
+    //margin: 0;
+  }
+  .form {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+input {
+  background: #25262b;
+  color: #18191e;
+  font-size: 1rem;
+  font-weight: 700;
+  border: none;
+  padding: 32px 80px 32px 32px;
+  margin-bottom: 30px;
+  transition: 0.4s;
+  //height: 80px;
+
+  &:focus {
+    background: #2D2F34;
+  }
+  &:hover {
+    background: #2D2F34;
+  }
+}
+
+.user {
+  background: url("../../assets/images/user-icon.png") no-repeat 26rem 1.8rem #25262b;
+  color: $text_color;
+}
+.pass {
+  background: url("../../assets/images/pass-icon.png") no-repeat 26rem 1.8rem #25262b;
+  color: $text_color;
+}
+
+button {
+  background: $beige;
+  color: $sign-in_color;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  height: 80px;
+  margin-bottom: 30px;
+  transition: 0.2s;
+  &:hover {
+    background: #e9b345;
+  }
+  &:active {
+    background: #916c2b;
+  }
+}
+
+.form_row {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  margin: 10px 0;
+  a {
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+    &:first-child {
+      color: $text_color;
+    }
+    &:last-child {
+      color: $beige;
+    }
+  }
 }
