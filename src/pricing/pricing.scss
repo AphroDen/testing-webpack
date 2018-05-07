@@ -139,16 +139,26 @@ body {
 }
 .main-txt {
   //border: 2px solid blue;
+  //display: flex;
+  //justify-content: center;
+  //align-items: flex-start;
   color: #fff;
   position: relative;
   z-index: 2;
   text-align: center;
   h1 {
+    //display: flex;
     font-size: 64px;
+    margin: 0 0 20px 0;
+  }
+  p {
+    margin: 0;
+
   }
   .table {
-    //display: inline-block; /*не обязательно*/
+    display: inline-block; /*не обязательно*/
     text-transform: uppercase;
+    margin: 0 0 20px;
     &::before {
       display: inline-block;
       content: '';
@@ -188,6 +198,6 @@ body {
   border-radius: 50%;
   width: 70px;
   background-color: #fff;
-  box-shadow: 0px 0px 18.69px 2.31px rgba(204, 204, 223, 0.5);
+  box-shadow: 0 0 18.69px 2.31px rgba(204, 204, 223, 0.5);
 }
 
