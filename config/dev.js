@@ -9,7 +9,8 @@ const dev = (config, _path) => {
     contentBase: _path,
     compress: true,
     port: 8080,
-    host: '0.0.0.0',
+    host: '192.168.1.165',
+      /** сменить host на 0.0.0.0**/
     disableHostCheck: true
   };
   config.devtool = 'inline-source-map';
