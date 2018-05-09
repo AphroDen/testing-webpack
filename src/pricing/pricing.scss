@@ -1,5 +1,6 @@
 $white-color: #f9fafc;
 $black-color: #000;
+@import '../common/styles/_libs';
 
 body {
   background: #fff;
@@ -358,30 +359,46 @@ body {
     color: #fff;
   }
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   //align-items: flex-end;
   padding: 45px 200px;
 }
-
 
 //Footer
 
 footer {
   padding: 30px 45px;
-  background: grey;
+  //background: grey;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 15vh;
+  height: 18vh;
+  .primary_nav_wrap ul {
+
+    //justify-content: space-between;
+    //position: relative;
+    //float: left;
+    a {
+      color: #333;
+    }
+    .start-btn {
+      border: 1px solid #c5c5c5;
+    }
+    .start-btn:hover {
+      background: #6e45e2;
+    }
+  }
 }
 
 .social {
   display: flex;
   justify-content: space-between;
 }
+
 .social-icons {
   display: flex;
   justify-content: space-between;
-  width: 72px;
+  width: 84px;
   align-items: center;
+
 }
