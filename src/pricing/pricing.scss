@@ -11,21 +11,18 @@ body {
   font-family: 'Maven Pro', sans-serif;
 }
 
+//.koks {
+//  display: flex;
+//  justify-content: center;
+//  flex-direction: column;
+//}
 
-
-
-
-
+// гамбургер
 .menu-on {
   display: none;
 }
 
-
-
-
-
-
-
+// гамбургер
 
 .main, .plan-select, .cta {
   display: flex;
@@ -47,8 +44,6 @@ body {
   height: 100%;
   top: 0;
   opacity: 0.8;
-  //left: 0;
-  //z-index: 0;
 }
 
 .header {
@@ -57,22 +52,10 @@ body {
   align-items: center;
   position: relative;
   width: 100%;
-  //border: 2px solid red;
-  //padding: 45px;
-  //z-index: 2;
   .logo {
-    display: flex;
     width: 244px;
     height: 54px;
-    //background: url("../../assets/images/pricing_table/pricing-logo.png") no-repeat center;
-    //margin: auto;
   }
-}
-
-#primary_nav_wrap {
-  //display: flex;
-  //margin-top: 15px
-  //margin: 0 auto;
 }
 
 #primary_nav_wrap ul {
@@ -81,9 +64,6 @@ body {
   list-style: none;
   padding: 0;
   margin: 0;
-  //justify-content: space-between;
-  //position: relative;
-  //float: left;
   a {
     display: block;
     padding: 6px 25px;
@@ -92,16 +72,11 @@ body {
     font-weight: 500;
     font-size: 14px;
     line-height: 32px;
-    //padding: 0 15px;
-    //font-family: "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
   }
   li {
     position: relative;
     transition: 0.4s;
-
-    //float: left;
-    //margin: 0;
-    //padding: 0;
     &:hover {
       background: $purple-color;
       //filter: invert(100%);
@@ -115,13 +90,11 @@ body {
     top: 100%;
     left: 0;
     padding: 0;
-    //background: #333;
-    //  filter: (Opacity=90);
-    //filter: blur(.5px); /*kek*/
+
     li {
       float: none;
       width: 170px;
-      //background: #333;
+
     }
     a {
       line-height: 120%;
@@ -212,13 +185,10 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-direction: column;
   background: $white-color;
-  position: relative;
   min-height: 100vh;
   padding: 45px;
-  //background: url("../../assets/images/pricing_table/main-bg.jpg") no-repeat center;
-  //background-size: cover;
+
 }
 
 .plan-select-txt {
@@ -253,9 +223,6 @@ body {
 }
 
 .plan-item {
-  //> .start-btn {
-  //  border: none;
-  //}
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -263,7 +230,7 @@ body {
   border: 1px solid #c5c5c5;
   max-width: 330px;
   height: 546px;
-  border-radius: 5%;
+  border-radius: 50px;
   padding: 54px;
   margin: 0 20px;
   transition: box-shadow 0.3s, transform 0.3s;
@@ -303,24 +270,20 @@ body {
 //Third block
 
 .cta {
-
   background: url("../../assets/images/pricing_table/cta-bg.png") no-repeat center;
-  background-size: cover;
-  height: 80vh;
-  padding: 0;
+  //background-size: cover;
+  max-height: 50vh;
+  //padding: 45px;
 }
 
 .cta-overlay {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-image: linear-gradient(150deg, $purple-color 0%, $turquoise-color 100%);
-  background-size: cover;
+  position: absolute;
   width: 100%;
   height: 100%;
+  top: 0;
   opacity: 0.8;
-  padding: 45px 0;
-  //background: url("../../assets/images/pricing_table/main-bg.jpg") no-repeat center;
+  z-index: 0;
   .plan-select-txt {
     color: $white-color;
     font-weight: 700;
@@ -365,6 +328,10 @@ footer {
     .start-btn:hover {
       background: $purple-color;
     }
+    .lolkek {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 }
 
@@ -378,19 +345,15 @@ footer {
   justify-content: space-between;
   width: 84px;
   align-items: center;
-
 }
 
 @media (max-width: 1170px) {
-
   .header {
     flex-wrap: wrap;
     justify-content: center;
     .logo {
-      //width: 100%;
     }
   }
-
   .plan-box {
     flex-wrap: wrap;
     justify-content: center;
@@ -404,27 +367,41 @@ footer {
       }
     }
   }
-
   .plan-select {
     justify-content: space-around;
     padding: 20px;
   }
 }
 
-@media (max-width: 987px) {
-  .plan-item {
-    min-width: 40%;
-    //min-height: 30%;
+@media (max-width: 986px) {
+  .plan-select {
+    justify-content: center;
+    flex-direction: column;
+    .plan-item {
+      padding: 10px;
+      min-width: 30%;
+      max-height: 30rem;
+    }
+    .kekes {
+      min-width: 66%;
+      max-height: 15rem;
+      display: flex;
+      flex-direction: row;
+      .start-btn {
+        //padding-top: 10px;
+      }
+    }
   }
 }
 
-@media (max-width: 783px) {
-
-  #primary_nav_wrap {
-    display: none;
-  }
-
-  .menu-on {
-    display: block;
+@media (max-width: 676px) {
+  .plan-select {
+    .plan-item {
+      min-width: 85%;
+      max-height: 15rem;
+      padding: 2rem;
+      display: flex;
+      flex-direction: row;
+    }
   }
 }

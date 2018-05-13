@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
  * Bootstrap v4.1.0 (https://getbootstrap.com/)
  * Copyright 2011-2018 The Bootstrap Authors
@@ -6772,4 +6773,106 @@ a.text-dark:hover, a.text-dark:focus {
     border: 1px solid #dee2e6 !important; } }
 
 body {
-  background: purple; }
+  box-sizing: border-box; }
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0;
+  font-variant: small-caps;
+  /*очень классная фича*/ }
+
+.padd_for_content {
+  padding-top: 56px; }
+
+.main-nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: justify;
+      justify-content: space-between;
+  position: fixed;
+  padding: 0 25px;
+  width: 100%;
+  height: 56px;
+  background: #2F2F2F; }
+  .main-nav .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%; }
+  .main-nav .menu {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+        justify-content: space-between;
+    list-style: none;
+    margin: 0;
+    min-width: 744px;
+    padding: 0; }
+    .main-nav .menu .header-icon {
+      transition: all .15s ease; }
+      .main-nav .menu .header-icon:hover {
+        filter: invert(0.5); }
+    .main-nav .menu a {
+      text-decoration: none;
+      transition: all .5s ease;
+      padding: 0 10px;
+      height: 56px;
+      line-height: 56px;
+      display: block;
+      color: #999; }
+      .main-nav .menu a:hover {
+        color: #D6D6D6; }
+  .main-nav .user-profile {
+    padding-right: 15px; }
+    .main-nav .user-profile img {
+      position: relative;
+      border-radius: 50%;
+      height: 18px; }
+  .main-nav input {
+    background: url("https://cdn.dribbble.com/assets/icon-search-7a07ad9f258fc1d8c28a29faa5627b41c2cc353d138b6bc3e987e0719584ce69.png") no-repeat 5px 7px #fff;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    padding: 1px 25px; }
+
+#search {
+  width: 262px; }
+
+.kek1 .kek2 {
+  display: none;
+  list-style: none;
+  padding: 0 0 3px 0;
+  background: #2F2F2F;
+  border-radius: 0 0 5px 5px; }
+  .kek1 .kek2 a {
+    display: block;
+    white-space: nowrap;
+    padding: 5px 10px;
+    font-size: 90%;
+    width: 200px; }
+
+.kek1:hover .kek2 {
+  display: block;
+  position: absolute; }
+  .kek1:hover .kek2 a:hover {
+    background: #585858; }
+
+.separator {
+  border-top: 1px solid #585858; }
+
+@media screen and (max-width: 1073px) {
+  .main-nav {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    .main-nav .menu {
+      min-width: 100%; }
+    .main-nav form {
+      display: none; } }
+
+hr.styled_hr {
+  border-top: 3px double #8c8b8b;
+  margin: 0; }
+
+.progress-bar {
+  border-right: 1px solid white; }
