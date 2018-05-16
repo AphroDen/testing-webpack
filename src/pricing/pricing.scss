@@ -97,18 +97,21 @@ input[type=checkbox] {
         transition: .5s;
         transition-delay: 0s;
         > a {
-          //display: block;
+          display: block;
           padding: 20px;
           text-decoration: none;
           text-transform: uppercase;
           color: $black-color;
           font-weight: 700;
-          line-height: 5rem;
+          line-height: 1.4rem;
+          //> img {
+          //  display: none;
+          //}
         }
         a:after {
           display: block;
           position: absolute;
-          left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+          left: 20px; /*изменить на right:0;, чтобы изменить направление подчёркивания */
           width: 0; /*задаём длинну линии до наведения курсора*/
           height: 2px; /*задаём ширину линии*/
           background-color: $purple-color; /*задаём цвет линии*/
@@ -117,13 +120,12 @@ input[type=checkbox] {
         }
         a:hover::after,
         a:focus::after {
-          width: 50%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+          width: 70%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
         }
       }
     }
   }
   input:checked ~ nav {
-
     height: 100%;
     transition-delay: 0s;
     > ul {
@@ -146,7 +148,7 @@ input[type=checkbox] {
   position: relative;
   height: 100vh;
   min-height: 600px;
-  padding: 45px;
+  //padding: 45px;
 }
 
 .main-overlay {
@@ -162,9 +164,11 @@ input[type=checkbox] {
 .header {
   display: flex;
   justify-content: space-between;
+  //flex-direction: column;
   align-items: center;
   position: relative;
   width: 100%;
+  padding: 2rem;
 
   .logo {
     width: 244px;
@@ -275,25 +279,27 @@ input[type=checkbox] {
 
 //COMMON TXT
 
-.main-arrow {
+.arrow-down {
+  text-align: center;
+  line-height: 70px;
+  border-radius: 50%;
+  width: 70px;
   z-index: 2;
-  display: flex;
-  //justify-content: center;
-  //align-items: center;
-
-  .arrow-down {
-    text-align: center;
-    line-height: 70px;
-    border-radius: 50%;
-    width: 70px;
-    background-color: $white-color;
-    box-shadow: 0 0 18.69px 2.31px rgba(204, 204, 223, 0.5);
-    transition: .15s;
-    &:hover {
-      transform: scale(1.05);
-    }
+  cursor: pointer;
+  background-color: $white-color;
+  box-shadow: 0 0 18.69px 2.31px rgba(204, 204, 223, 0.5);
+  transition: .15s;
+  &:hover {
+    transform: scale(1.05);
   }
+  margin-bottom: 1.5rem;
 }
+
+//.main-arrow {
+//  display: flex;
+//  justify-content: center;
+//  align-items: center;
+//}
 
 //SECOND BLOCK .plan-select + .clearfix
 .plan-select {
@@ -356,10 +362,14 @@ input[type=checkbox] {
     color: #aeaeae;
     text-align: center;
     line-height: 140%;
-
+    img {
+      max-width: 150%;
+      //max-height: 100px;
+    }
     &:hover {
       box-shadow: 0 0 154px -20px $black-color;
       transform: scale(1.02, 1.02);
+
     }
     :last-child {
       color: #9c9c9c;
@@ -382,19 +392,12 @@ input[type=checkbox] {
     transition: 0.3s;
     font-size: 12px;
     font-weight: 700;
-
     &:hover {
       background: $purple-color;
-      color: $white-color;
+      //color: $white-color;
     }
   }
 }
-
-//.plan-item-test {
-//  display: flex;
-//  flex-direction: column;
-//  justify-content: space-between;
-//}
 
 //THIRD BLOCK .cta
 .cta {
@@ -443,32 +446,22 @@ input[type=checkbox] {
 //FOOTER
 
 footer {
-  padding: 30px 45px;
+  //padding: 30px 45px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 18vh;
-  //#primary_nav_wrap ul {
-  //  a {
-  //    color: #333;
-  //  }
-  //  .start-btn {
-  //    //border: 1px solid red;
-  //  }
-  //  .start-btn:hover {
-  //    background: $purple-color;
-  //  }
-  //  .lolkek {
-  //    display: flex;
-  //    justify-content: space-between;
-  //  }
-  //}
+  padding: 30px;
+
+  font-size: .6rem;
+
   .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     //position: relative;
     //width: 100%;
+    padding: 0;
 
     .logo2 {
       width: 200%;
@@ -485,6 +478,9 @@ footer {
     justify-content: space-between;
     width: 84px;
     align-items: center;
+    > img {
+      //padding-left: 20px;
+    }
   }
 }
 
@@ -499,13 +495,15 @@ footer {
   }
   .plan-box {
     flex-wrap: wrap;
-    justify-content: center;
+    //justify-content: center;
 
     .plan-item {
       padding: 10px;
       margin: 5px;
       max-width: 300px;
       max-height: 70vh;
+
+      //font-size: 0.8rem;
       &:hover {
         box-shadow: 0 0 54px -10px $black-color;
       }
@@ -525,45 +523,86 @@ footer {
     .plan-item {
       padding: 10px;
       max-height: 30rem;
+      font-size: 0.9rem;
     }
     .third-leg {
-      min-width: 610px;
+      max-width: 610px;
       max-height: 15rem;
       display: flex;
       flex-direction: row;
     }
   }
+  .plan-item:last-child {
+    .plan-items-stuff {
+      width: 50%;
+    }
+  }
 }
 
-@media (max-width: 782px) {
+@media only screen and (max-width: 782px) {
   .logo {
     display: none;
   }
-  //.black-logo {
-  //  background: url("../../assets/images/pricing_table/pricing-logo-bottom.png");
-  //  top: 320px;
-  //  right: 200px;
-
   .menu-burger {
-    display: flex;
+    display: block;
+
     //flex-direction: row;
     //justify-content: space-between;
   }
   #primary_nav_wrap {
     display: none;
   }
-}
-
-@media (max-width: 676px) {
-  .plan-select {
-
-    .plan-item {
-      min-width: 85%;
-      max-height: 15rem;
-      padding: 2rem;
-      display: flex;
-      flex-direction: row;
+  .plan-item:last-child {
+    .plan-items-stuff {
+      width: 50%;
     }
   }
 }
 
+@media (max-width: 676px) {
+
+  .social {
+    padding-top: 6rem;
+  }
+  .plan-btn {
+    a {
+      padding: 15px 20px;
+    }
+  }
+  .plan-select {
+
+    .plan-item {
+      //min-width: 85%;
+      align-items: center;
+      justify-content: space-between;
+      max-width: 610px;
+      max-height: 15rem;
+      padding: 1rem;
+      flex-direction: row;
+      font-size: 0.8rem;
+      img {
+        max-width: 125px;
+        max-height: 125px;
+      }
+      .plan-items-stuff {
+        width: 50%;
+      }
+    }
+  }
+}
+
+//
+//display: flex;
+//justify-content: space-around;
+//align-items: center;
+//flex-direction: column;
+//border: 1px solid #c5c5c5;
+//max-width: 330px;
+//height: 546px;
+//border-radius: 50px;
+//padding: 54px;
+//margin: 0 1rem;
+//transition: box-shadow 0.3s, transform 0.3s;
+//color: #aeaeae;
+//text-align: center;
+//line-height: 140%;
