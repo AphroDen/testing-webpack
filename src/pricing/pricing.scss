@@ -11,171 +11,217 @@ body {
   font-family: 'Maven Pro', sans-serif;
 }
 
-//
-//.black-logo {
+#wrapper {
+  //background:#29afd1;
+  display: inline-block;
+  border-radius: 500px;
+  margin: 10px;
+  position: relative;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.main-item {
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+
+.line {
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background: red;
+  border-radius: 10px;
+  transition: all cubic-bezier(0.25, 0.1, 0.28, 1.54) 0.32s;
+}
+
+.line01 {
+  top: 19%;
+}
+
+.line02 {
+  top: 49%;
+}
+
+.line03 {
+  top: 79%;
+}
+
+.menu.close .line01 {
+  transform: rotate(45deg);
+  top: 49%;
+}
+
+.menu.close .line02, .menu.close .line03 {
+  transform: rotate(-45deg);
+  top: 49%;
+}
+
+
+
+//ACCORDION
+//.accordion {
+//  background-color: #eee;
+//  color: #444;
+//  cursor: pointer;
+//  padding: 18px;
+//  width: 100%;
+//  border: none;
+//  text-align: left;
+//  outline: none;
+//  font-size: 15px;
+//  transition: 0.4s;
+//  z-index: 5;
 //  display: none;
 //}
-
-
-//ACCORDION
-.accordion {
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  transition: 0.4s;
-  z-index: 5;
-  display: none;
-}
-
-.active, .accordion:hover {
-  background-color: #ccc;
-}
-
-.panel {
-  padding: 0 18px;
-  display: none;
-  background-color: white;
-  overflow: hidden;
-}
+//
+//.active, .accordion:hover {
+//  background-color: #ccc;
+//}
+//
+//.panel {
+//  padding: 0 18px;
+//  display: none;
+//  background-color: white;
+//  overflow: hidden;
+//}
 
 //ACCORDION
 
-// MENU-BURGER
+//MENU-BURGER
 input[type=checkbox] {
   display: none;
 }
 
-.bj {
-  //background: url("../../assets/images/pricing_table/pricing-logo-bottom.png") no-repeat center;
-  //width: 200px;
-  //height: 40px;
-  left: -42rem;
-  top: -1rem;
-  position: absolute;
-}
+//.bj {
+//  //background: url("../../assets/images/pricing_table/pricing-logo-bottom.png") no-repeat center;
+//  //width: 200px;
+//  //height: 40px;
+//  left: -42rem;
+//  top: -1rem;
+//  position: absolute;
+//  //display: none;
+//}
 
 .menu-burger {
   display: none;
   input + label {
     position: fixed;
-    top: 15px;
-    right: 40px;
-    height: 20px;
+    top: -1rem;
+    right: 60px;
+    //height: 20px;
     width: 15px;
     z-index: 4;
-    span {
-      background: $black-color;
-      position: absolute;
-      width: 200%;
-      height: 3px;
-      top: 50%;
-      left: 10%;
-      transition: .5s;
-      //margin-top: -1px;
-      //display: block;
-    }
-    span:first-child {
-      top: 2px;
-    }
-    span:last-child {
-      top: 17px;
-    }
+    //span {
+    //  background: $black-color;
+    //  position: absolute;
+    //  width: 200%;
+    //  height: 3px;
+    //  padding-bottom: 2px;
+    //  top: 50%;
+    //  left: 10%;
+    //  transition: .5s;
+    //  //margin-top: -1px;
+    //  //display: block;
+    //}
+    //span:first-child {
+    //  top: 2px;
+    //}
+    //span:last-child {
+    //  top: 17px;
+    //}
   }
 
   label:hover {
     cursor: pointer;
   }
 
-  input:checked + label {
-    span {
-      opacity: 0;
-      top: 50%;
-    }
-    span:first-child {
-      opacity: 1;
-      transform: rotate(405deg);
-    }
-    span:last-child {
-      opacity: 1;
-      transform: rotate(-405deg);
-    }
-  }
-  input ~ nav {
-    background: $white-color;
-    box-shadow: 0 0 10px 0 $black-color;
-    position: fixed;
-    //top: 0;
-    //left: 0;
-    width: 100%;
-    height: 50px;
-    z-index: 3;
-    transition: .3s;
-    transition-delay: .1s;
-    overflow: hidden;
-    > ul {
-      display: flex;
-      //justify-content: center;
-      flex-direction: column;
-      align-items: flex-start;
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      //text-align: left;
-      position: absolute;
-      top: 10%;
-      left: 20%;
-      right: 20%;
-      > li {
-        display: none;
-        //opacity: 1; //тот самый обоссаный линк поверх бургера
-        transition: .5s;
-        transition-delay: 0s;
-        //z-index: 5;
-        > a {
-          display: block;
-          padding: 20px;
-          text-decoration: none;
-          text-transform: uppercase;
-          color: $black-color;
-          font-weight: 700;
-          line-height: 1.4rem;
-          border: 1px solid red;
-          //> img {
-          //  display: none;
-          //}
-        }
-        a:after {
-          display: block;
-          position: absolute;
-          left: 20px; /*изменить на right:0;, чтобы изменить направление подчёркивания */
-          width: 0; /*задаём длинну линии до наведения курсора*/
-          height: 2px; /*задаём ширину линии*/
-          background-color: $purple-color; /*задаём цвет линии*/
-          content: "";
-          transition: width 0.3s ease-out; /*задаём время анимации*/
-        }
-        a:hover::after,
-        a:focus::after {
-          width: 70%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
-        }
-      }
-    }
-  }
-  input:checked ~ nav {
-    height: 100%;
-    transition-delay: 0s;
-    > ul {
-      > li {
+  //input:checked + label {
+  //  span {
+  //    opacity: 0;
+  //    top: 50%;
+  //  }
+  //  span:first-child {
+  //    opacity: 1;
+  //    transform: rotate(405deg);
+  //  }
+  //  span:last-child {
+  //    opacity: 1;
+  //    transform: rotate(-405deg);
+  //  }
+}
+
+input ~ nav {
+  background: $white-color;
+  box-shadow: 0 0 10px 0 $black-color;
+  position: fixed;
+  //top: 0;
+  //left: 0;
+  width: 100%;
+  height: 50px;
+  z-index: 3;
+  transition: .3s;
+  transition-delay: .1s;
+  overflow: hidden;
+  > ul {
+    display: flex;
+    //justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    //text-align: left;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    right: 20%;
+    > li {
+      display: none;
+      //opacity: 1; //тот самый обоссаный линк поверх бургера
+      transition: .5s;
+      transition-delay: 0s;
+      //z-index: 5;
+      > a {
         display: block;
-        opacity: 1;
-        transition-delay: .5s;
+        padding: 20px;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: $black-color;
+        font-weight: 700;
+        line-height: 1.4rem;
+        border: 1px solid red;
+        //> img {
+        //  display: none;
+        //}
       }
+      a:after {
+        display: block;
+        position: absolute;
+        left: 20px; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+        width: 0; /*задаём длинну линии до наведения курсора*/
+        height: 2px; /*задаём ширину линии*/
+        background-color: $purple-color; /*задаём цвет линии*/
+        content: "";
+        transition: width 0.3s ease-out; /*задаём время анимации*/
+      }
+      a:hover::after,
+      a:focus::after {
+        width: 70%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+      }
+    }
+  }
+}
+
+input:checked ~ nav {
+  height: 100%;
+  transition-delay: 0s;
+  > ul {
+    > li {
+      display: block;
+      opacity: 1;
+      transition-delay: .5s;
     }
   }
 }
@@ -583,6 +629,7 @@ footer {
 }
 
 @media only screen and (max-width: 782px) {
+
   .logo {
     display: none;
   }

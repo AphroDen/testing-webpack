@@ -14,3 +14,8 @@ for (i = 0; i < acc.length; i++) {
         }
     });
 }
+
+
+$("#wrapper").click( function() {
+    $(".menu").toggleClass("close");
+});
