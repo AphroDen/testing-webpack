@@ -12,7 +12,8 @@ const baseConf = (_path) => {
         index: ['babel-polyfill', './src/index/index.js'],
         loginForm: ['babel-polyfill', './src/loginForm/loginForm.js'],
         about: ['babel-polyfill', './src/about/about.js'],
-        pricing: ['babel-polyfill', './src/pricing/pricing.js']
+        pricing: ['babel-polyfill', './src/pricing/pricing.js'],
+        agency: ['babel-polyfill', './src/pricing/agency.js']
     };
 
     const plugins = Object.keys(entry).reduce((acc, name) => {

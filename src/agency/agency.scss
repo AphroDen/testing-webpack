@@ -1,0 +1,12 @@
+$white-color: #f9fafc;
+$black-color: #000;
+$turquoise-color: #88D3CE;
+$darker-purple: #4f4f6f;
+$purple-color: #6e45e2;
+@import '../common/styles/_libs';
+
+body {
+  background: #fff;
+  margin: 0;
+  font-family: 'Maven Pro', sans-serif;
+}
