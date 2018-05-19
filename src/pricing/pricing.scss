@@ -12,12 +12,14 @@ body {
 }
 
 #wrapper {
+  border: 1px solid red;
   //background:#29afd1;
   display: inline-block;
-  border-radius: 500px;
-  margin: 10px;
+  //border-radius: 500px;
+  //margin: 10px;
   position: relative;
-  padding: 20px;
+  padding: 5px;
+  top:1.5rem ;
   cursor: pointer;
 }
 
