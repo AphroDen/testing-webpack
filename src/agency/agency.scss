@@ -1,12 +1,119 @@
-$white-color: #f9fafc;
+$white-color: #fff;
+$darkBeige-color: #f6f2f2;
+$beige-color: #f5f0dd;
+$red-color: #ff2d2d;
+$light-black: #313030;
 $black-color: #000;
-$turquoise-color: #88D3CE;
-$darker-purple: #4f4f6f;
-$purple-color: #6e45e2;
+$commonIndent: 2rem 4rem 4rem 4rem;
 @import '../common/styles/_libs';
 
 body {
-  background: #fff;
+  //background: #fff;
   margin: 0;
   font-family: 'Maven Pro', sans-serif;
+}
+
+// Header
+header {
+  background: $darkBeige-color;
+  padding: $commonIndent;
+  .top-menu-box {
+    background: $light-black;
+    margin-bottom: 6rem;
+    .top-menu {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      list-style: none;
+      color: $white-color;
+      margin: 0;
+      padding: 0;
+      :hover {
+        background: $red-color;
+      }
+      li {
+        padding: 2rem;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: .3s;
+      }
+    }
+  }
+  .org {
+    display: flex;
+    justify-content: space-between;
+    .play-box {
+      box-shadow: 0 0 60px -5px $black-color;
+      .play-btn {
+        position: absolute;
+        top: 22rem;
+        right: 20rem;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+// Common styles
+
+.org-contact-us {
+  width: 40%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
+  h1 {
+    text-transform: uppercase;
+    font-size: 5rem;
+    font-weight: 900;
+  }
+  .main_btn {
+    padding: 0.5rem 2.5rem;
+    background-color: $red-color;
+    border: none;
+    border-radius: 5px;
+    color: $white-color;
+    cursor: pointer;
+  }
+}
+
+//Learn more
+.learn-more {
+  display: flex;
+  justify-content: space-between;
+  padding: $commonIndent;
+  .org-contact-us {
+    width: 40%;
+    //justify-content: flex-start;
+    //align-items: flex-start;
+    h1 {
+      text-transform: uppercase;
+      font-size: 3rem;
+      font-weight: 700;
+    }
+  }
+  .main_btn {
+    background: none;
+    border: 2px solid $red-color;
+    color: $red-color;
+  }
+}
+
+.service-box {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  width: 40%;
+  img {
+    margin-bottom: 2rem;
+  }
+  .services {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    //justify-content: space-between;
+    max-width: 280px;
+    margin: 0 0 2rem 2rem;
+    //border: 1px solid red;
+  }
 }
