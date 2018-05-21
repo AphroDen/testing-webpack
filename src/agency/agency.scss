@@ -13,32 +13,18 @@ body {
   font-family: 'Maven Pro', sans-serif;
 }
 
+h2 {
+  text-transform: uppercase;
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
 // Header
 header {
   background: $darkBeige-color;
   padding: $commonIndent;
-  .top-menu-box {
-    background: $light-black;
-    margin-bottom: 6rem;
-    .top-menu {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      list-style: none;
-      color: $white-color;
-      margin: 0;
-      padding: 0;
-      :hover {
-        background: $red-color;
-      }
-      li {
-        padding: 2rem;
-        text-transform: uppercase;
-        cursor: pointer;
-        transition: .3s;
-      }
-    }
-  }
+
   .org {
     display: flex;
     justify-content: space-between;
@@ -50,6 +36,29 @@ header {
         right: 20rem;
         cursor: pointer;
       }
+    }
+  }
+}
+
+.top-menu-box {
+  background: $light-black;
+  margin-bottom: 6rem;
+  .top-menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    list-style: none;
+    color: $white-color;
+    margin: 0;
+    padding: 0;
+    :hover {
+      background: $red-color;
+    }
+    li {
+      padding: 2rem;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: .3s;
     }
   }
 }
@@ -73,9 +82,10 @@ header {
     border: none;
     border-radius: 5px;
     color: $white-color;
+    font-weight: 500;
     cursor: pointer;
     transition: .1s;
-    outline:none;
+    outline: none;
     &:hover {
       background-color: #f02a2a;
     }
@@ -90,11 +100,12 @@ header {
   display: flex;
   justify-content: space-between;
   padding: $commonIndent;
+  //border-bottom: 1px solid red;
   .org-contact-us {
     width: 40%;
-    //justify-content: flex-start;
+    //justify-content: flex-start;npm st
     //align-items: flex-start;
-    h1 {
+    h2 {
       text-transform: uppercase;
       font-size: 3rem;
       font-weight: 700;
@@ -104,6 +115,7 @@ header {
     background: none;
     border: 2px solid $red-color;
     color: $red-color;
+    font-weight: 500;
     &:hover {
       background-color: #f3edea;
     }
@@ -113,22 +125,108 @@ header {
       //filter: invert(100%);
     }
   }
+  .service-box {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    width: 50%;
+    img {
+      margin-bottom: 2rem;
+    }
+    .services {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      max-width: 280px;
+      margin: 0 0 2rem 2rem;
+      //border: 1px solid red;
+    }
+  }
 }
 
-.service-box {
+hr {
+  width: 92%;
+  background-color: #f3edea;
+}
+
+// FEATURE
+
+.feature {
   display: flex;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  width: 40%;
-  img {
-    margin-bottom: 2rem;
+  justify-content: center;
+  align-items: center;
+  padding: $commonIndent;
+  flex-direction: column;
+  .org-contact-us {
+    align-items: center;
+    &::after {
+      display: block;
+      content: " ";
+      height: 2px;
+      width: 8rem;
+      background-color: $red-color;
+    }
+
+    p {
+      text-align: center;
+
+    }
   }
-  .services {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    max-width: 280px;
-    margin: 0 0 2rem 2rem;
-    //border: 1px solid red;
+  .top-menu-box {
+    background: $white-color;
+    margin-bottom: 6rem;
+    .top-menu {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      list-style: none;
+      color: $light-black;
+      font-weight: 700;
+      margin: 0;
+      padding: 0;
+      :hover {
+        background: #f5f5f5;
+        color: $red-color;
+      }
+      li {
+        padding: 2rem;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: .3s;
+      }
+    }
   }
 }
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 4rem;
+  img {
+    margin: 0.5rem;
+    transition: 0.3s;
+    &:hover {
+      transform: scale(1.02, 1.02);
+      box-shadow: 0 1px 20px 2px rgba(31, 32, 68, 0.25);
+      //transform: rotate(450deg);
+
+    }
+  }
+}
+
+.team {
+  display: flex;
+  padding: $commonIndent;
+  .org-contact-us {
+    p {
+      &::after {
+        display: block;
+        content: " ";
+        height: 2px;
+        width: 8rem;
+        background-color: $red-color;
+        margin: 2rem 0 4rem 0;
+      }
+    }
+  }}
