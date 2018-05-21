@@ -74,6 +74,14 @@ header {
     border-radius: 5px;
     color: $white-color;
     cursor: pointer;
+    transition: .1s;
+    outline:none;
+    &:hover {
+      background-color: #f02a2a;
+    }
+    &:active {
+      background-color: #c92727;
+    }
   }
 }
 
@@ -96,6 +104,14 @@ header {
     background: none;
     border: 2px solid $red-color;
     color: $red-color;
+    &:hover {
+      background-color: #f3edea;
+    }
+    &:active {
+      background-color: $red-color;
+      color: $white-color;
+      //filter: invert(100%);
+    }
   }
 }
 
