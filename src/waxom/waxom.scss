@@ -1,0 +1,151 @@
+$dark-beigeColor: #908373;
+$light-beigeColor: #c7b299;
+$mainColor: #555556;
+$whiteColor: #fff;
+$Raleway: 'Raleway', sans-serif;
+$Montserrat: 'Raleway', sans-serif;
+$Roboto: 'Roboto', sans-serif;
+
+body {
+  //background: $whiteColor;
+  padding: 0;
+  margin: 0;
+}
+
+.main_header {
+  background: url("../../assets/images/waxom/main-bg.jpg") rgba(45, 47, 52, 0.72);
+  background-blend-mode: multiply;
+  background-size: 100%;
+  height: 100vh;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-direction: column;
+  //align-items: center; -interesting
+  justify-content: space-between;
+  .top-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 18rem;
+
+    .logo-txt {
+      font-family: $Raleway;
+      color: $whiteColor;
+      font-size: 2rem;
+      &::before {
+        display: inline-block;
+        vertical-align: middle;
+        height: 4rem;
+        width: 4rem;
+        content: " ";
+        background: url("../../assets/images/waxom/logo.png") no-repeat center;
+      }
+    }
+    .menu-nav {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      font-family: $Montserrat;
+      font-size: 0.8rem;
+      li {
+        color: $whiteColor;
+        padding-right: 1.5rem;
+        text-transform: capitalize;
+        cursor: pointer;
+        &:hover {
+          color: $light-beigeColor;
+        }
+      }
+    }
+  }
+  .main-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: $whiteColor;
+    h2 {
+      font-family: $Raleway;
+      font-weight: 400;
+      margin: 0 0 0.5rem 0;
+    }
+    h1 {
+      display: flex;
+      justify-content: space-between;
+      font-family: $Raleway;
+      font-weight: 800;
+      font-size: 2.5rem;
+      margin: 0 0 0.5rem 0;
+    }
+    p {
+      font-family: $Montserrat;
+      font-size: .95rem;
+      margin: 0 0 1.5rem 0;
+      width: 30%;
+      text-align: center;
+    }
+    .start-btn {
+      background: #998675;
+      color: #eae6e2;
+      padding: .8rem 1.8rem;
+      border: none;
+      border-radius: 5px;
+      font-family: $Raleway;
+      font-weight: 800;
+      text-transform: uppercase;
+      box-shadow: -1px 5px 11px -6px rgb(125, 106, 93);
+    }
+  }
+  .slides {
+    display: flex;
+    justify-content: center;
+
+    .rounds {
+      margin: .2rem;
+      border-radius: 50%;
+      width: .8rem;
+      height: .8rem;
+      cursor: pointer;
+      background-color: #8c8d8f;
+      &:focus {
+        background: none;
+        outline: 2px solid rgba(255,255,255,0.8); /* Пунктирная рамка */
+        //outline-offset: -5px; /* Выводим рамку внутри элемента */
+      }
+      &:hover {
+        background: #B5B6B8;
+      }
+    }
+  }
+}
+
+.services {
+  display: flex;
+  padding: 4rem 20rem;
+  .service-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    &::after {
+      display: inline-block;
+      content: '';
+      width: 4rem;
+      height: 2px;
+      background-color: #f1eee9;
+      vertical-align: middle;
+      //margin-right: 10px;
+    }
+    p {
+      margin-top: 0 ;
+    }
+
+  }
+  :hover {
+    color: #c7b299;
+  }
+  :hover img {
+    filter: opacity(80%);
+  }
+}
