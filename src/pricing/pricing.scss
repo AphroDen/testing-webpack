@@ -440,7 +440,7 @@ input:checked ~ nav {
   justify-content: center;
   .plan-item {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
     border: 1px solid #c5c5c5;
@@ -460,11 +460,11 @@ input:checked ~ nav {
     &:hover {
       box-shadow: 0 0 154px -20px $black-color;
       transform: scale(1.02, 1.02);
-
     }
     :last-child {
       color: #9c9c9c;
     }
+
     .start-btn {
       border: none;
     }
@@ -475,6 +475,7 @@ input:checked ~ nav {
 }
 
 .plan-btn {
+  padding-top: 2rem;
   a {
     text-decoration: none;
     border: 1px solid #c5c5c5;
@@ -485,6 +486,7 @@ input:checked ~ nav {
     font-weight: 700;
     &:hover {
       background: $purple-color;
+      color: white;
       //color: $white-color;
     }
   }
@@ -544,7 +546,7 @@ footer {
   height: 18vh;
   padding: 30px;
 
-  font-size: .6rem;
+  font-size: 1rem;
 
   .header {
     display: flex;
