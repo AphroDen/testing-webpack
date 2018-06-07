@@ -43,6 +43,7 @@
     "webpack-dev-server": "^2.7.1"
   },
   "dependencies": {
+    "animejs": "^2.2.0",
     "babel-polyfill": "^6.26.0",
     "bootstrap": "^4.0.0",
     "font-awesome": "^4.7.0",
