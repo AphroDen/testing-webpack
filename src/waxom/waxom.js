@@ -1,3 +1,4 @@
+"use strict";
 import './waxom.scss';
 
 let test = $('div.test');
@@ -23,3 +24,28 @@ $(function () {
         $(this).children().stop().animate({marginTop: '50%', opacity: 1}, 100);
     });
 });
+
+//
+// $(document).ready(function () {
+//
+//     $(".illustrations").append('<em></em>');
+//
+//     $(".thumbs a").click(function () {
+//
+//         let largePath = $(this).attr("href");
+//         let largeAlt = $(this).attr("title");
+//
+//         $("#largeImg").attr({src: largePath, alt: largeAlt});
+//
+//         $(".illustrations em").html(" (" + largeAlt + ")");
+//         return false;
+//     });
+//
+// });
+
+
+// Default options
+
+
+
+$(".nano").nanoScroller();
