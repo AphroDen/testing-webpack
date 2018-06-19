@@ -25,27 +25,11 @@ $(function () {
     });
 });
 
-//
-// $(document).ready(function () {
-//
-//     $(".illustrations").append('<em></em>');
-//
-//     $(".thumbs a").click(function () {
-//
-//         let largePath = $(this).attr("href");
-//         let largeAlt = $(this).attr("title");
-//
-//         $("#largeImg").attr({src: largePath, alt: largeAlt});
-//
-//         $(".illustrations em").html(" (" + largeAlt + ")");
-//         return false;
-//     });
-//
-// });
+jQuery(document).ready(function() {
+    $('.tiltshift').tiltShift();
+});
+
+$( '.swipebox' ).swipebox();
 
 
-// Default options
-
-
-
-$(".nano").nanoScroller();
+// $(".nano").nanoScroller();

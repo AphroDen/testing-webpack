@@ -1,3 +1,5 @@
+@import '../common/styles/_lib1';
+
 $dark-beigeColor: #908373;
 $light-beigeColor: #c7b299;
 $mainColor: #555556;
@@ -6,17 +8,10 @@ $Raleway: 'Raleway', sans-serif;
 $Montserrat: 'Montserrat', sans-serif;
 $Roboto: 'Roboto', sans-serif;
 
-@import '../common/styles/_lib1';
 body {
   //background: $whiteColor;
   padding: 0;
   margin: 0;
-}
-
-h2 {
-  font-family: $Raleway;
-  font-weight: 400;
-  margin: 0 0 0.5rem 0;
 }
 
 h1 {
@@ -25,6 +20,12 @@ h1 {
   font-family: $Raleway;
   font-weight: 800;
   font-size: 2.5rem;
+  margin: 0 0 0.5rem 0;
+}
+
+h2 {
+  font-family: $Raleway;
+  font-weight: 400;
   margin: 0 0 0.5rem 0;
 }
 
@@ -453,7 +454,7 @@ p {
 
 .range-txt {
   position: absolute;
-  bottom: 0%;
+  bottom: 0;
   left: 0;
   width: 100%;
   color: #000;
