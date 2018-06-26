@@ -14,7 +14,7 @@ const baseConf = (_path) => {
         about: ['babel-polyfill', './src/about/about.js'],
         pricing: ['babel-polyfill', './src/pricing/pricing.js'],
         agency: ['babel-polyfill', './src/agency/agency.js'],
-        waxom: ['babel-polyfill', './src/waxom/switch.js'],
+        waxom: ['babel-polyfill', './src/waxom/waxom.js'],
         switch: ['babel-polyfill', './src/switch/switch.js']
     };
 
